@@ -12,6 +12,7 @@ def validate_user(username, minlen):
     # Usernames can't be shorter than minlen
     if len(username) < minlen:
         return False
+    # First character of username can't be special character
     forbidden_characters = "[._?$/\#@%]"
     if re.match(forbidden_characters, username[0]):
     	return False
